@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.5.1/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.5.1/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://rawcdn.githack.com/python-visualization/folium/master/folium/templates/leaflet.awesome.rotate.css"/>
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_f5c55da8d9fa4e0b870abb3a8d51069e {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+</head>
+<body>    
+    
+            <div class="folium-map" id="map_f5c55da8d9fa4e0b870abb3a8d51069e" ></div>
+        
+</body>
+<script>    
+    
+            var map_f5c55da8d9fa4e0b870abb3a8d51069e = L.map(
+                "map_f5c55da8d9fa4e0b870abb3a8d51069e",
+                {
+                    center: [-18.9186, -48.2772],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 7,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_950eef0350a1411eac113288ef35e09d = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_f5c55da8d9fa4e0b870abb3a8d51069e);
+        
+    
+            var feature_group_56b2100893df4554b42322abdb63e4c2 = L.featureGroup(
+                {}
+            ).addTo(map_f5c55da8d9fa4e0b870abb3a8d51069e);
+        
+    
+        function geo_json_7b2fcea663024582848d6759ab5797d7_onEachFeature(feature, layer) {
+            layer.on({
+                click: function(e) {
+                    map_f5c55da8d9fa4e0b870abb3a8d51069e.fitBounds(e.target.getBounds());
+                }
+            });
+        };
+        var geo_json_7b2fcea663024582848d6759ab5797d7 = L.geoJson(null, {
+                onEachFeature: geo_json_7b2fcea663024582848d6759ab5797d7_onEachFeature,
+            
+        });
+        function geo_json_7b2fcea663024582848d6759ab5797d7_add (data) {
+            geo_json_7b2fcea663024582848d6759ab5797d7.addData(data)
+                .addTo(feature_group_56b2100893df4554b42322abdb63e4c2);
+        }
+            geo_json_7b2fcea663024582848d6759ab5797d7_add([{"codigo": 12, "id_pais": 1, "id_uf": 1, "nome": "Acre", "sigla": "AC"}, {"codigo": 27, "id_pais": 1, "id_uf": 2, "nome": "Alagoas", "sigla": "AL"}, {"codigo": 13, "id_pais": 1, "id_uf": 3, "nome": "Amazonas", "sigla": "AM"}, {"codigo": 16, "id_pais": 1, "id_uf": 4, "nome": "Amap\u00e1", "sigla": "AP"}, {"codigo": 29, "id_pais": 1, "id_uf": 5, "nome": "Bahia", "sigla": "BA"}, {"codigo": 23, "id_pais": 1, "id_uf": 6, "nome": "Cear\u00e1", "sigla": "CE"}, {"codigo": 53, "id_pais": 1, "id_uf": 7, "nome": "Distrito Federal", "sigla": "DF"}, {"codigo": 32, "id_pais": 1, "id_uf": 8, "nome": "Esp\u00edrito Santo", "sigla": "ES"}, {"codigo": 52, "id_pais": 1, "id_uf": 9, "nome": "Goi\u00e1s", "sigla": "GO"}, {"codigo": 21, "id_pais": 1, "id_uf": 10, "nome": "Maranh\u00e3o", "sigla": "MA"}, {"codigo": 31, "id_pais": 1, "id_uf": 11, "nome": "Minas Gerais", "sigla": "MG"}, {"codigo": 50, "id_pais": 1, "id_uf": 12, "nome": "Mato Grosso do Sul", "sigla": "MS"}, {"codigo": 51, "id_pais": 1, "id_uf": 13, "nome": "Mato Grosso", "sigla": "MT"}, {"codigo": 15, "id_pais": 1, "id_uf": 14, "nome": "Par\u00e1", "sigla": "PA"}, {"codigo": 25, "id_pais": 1, "id_uf": 15, "nome": "Para\u00edba", "sigla": "PB"}, {"codigo": 26, "id_pais": 1, "id_uf": 16, "nome": "Pernambuco", "sigla": "PE"}, {"codigo": 22, "id_pais": 1, "id_uf": 17, "nome": "Piau\u00ed", "sigla": "PI"}, {"codigo": 41, "id_pais": 1, "id_uf": 18, "nome": "Paran\u00e1", "sigla": "PR"}, {"codigo": 33, "id_pais": 1, "id_uf": 19, "nome": "Rio de Janeiro", "sigla": "RJ"}, {"codigo": 24, "id_pais": 1, "id_uf": 20, "nome": "Rio Grande do Norte", "sigla": "RN"}, {"codigo": 11, "id_pais": 1, "id_uf": 21, "nome": "Rond\u00f4nia", "sigla": "RO"}, {"codigo": 14, "id_pais": 1, "id_uf": 22, "nome": "Roraima", "sigla": "RR"}, {"codigo": 43, "id_pais": 1, "id_uf": 23, "nome": "Rio Grande do Sul", "sigla": "RS"}, {"codigo": 42, "id_pais": 1, "id_uf": 24, "nome": "Santa Catarina", "sigla": "SC"}, {"codigo": 28, "id_pais": 1, "id_uf": 25, "nome": "Sergipe", "sigla": "SE"}, {"codigo": 35, "id_pais": 1, "id_uf": 26, "nome": "S\u00e3o Paulo", "sigla": "SP"}, {"codigo": 17, "id_pais": 1, "id_uf": 27, "nome": "Tocantins", "sigla": "TO"}]);
+        
+    
+            var marker_974bbb8608f24b779b56b755acfcabe5 = L.marker(
+                [-18.9186, -48.2772],
+                {}
+            ).addTo(feature_group_56b2100893df4554b42322abdb63e4c2);
+        
+    
+        var popup_8b7b9db389184d6a88f9acd59a63d347 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_7dee9d6f6e834c82a9b045e8352d4220 = $(`<div id="html_7dee9d6f6e834c82a9b045e8352d4220" style="width: 100.0%; height: 100.0%;">this is my location</div>`)[0];
+            popup_8b7b9db389184d6a88f9acd59a63d347.setContent(html_7dee9d6f6e834c82a9b045e8352d4220);
+        
+
+        marker_974bbb8608f24b779b56b755acfcabe5.bindPopup(popup_8b7b9db389184d6a88f9acd59a63d347)
+        ;
+
+        
+    
+</script>
